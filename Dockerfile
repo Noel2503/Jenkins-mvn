@@ -5,7 +5,7 @@ FROM maven:3.8.5-openjdk-17 as build
 WORKDIR /app
 
 # Copy the Java source code
-COPY Calculator.java .
+COPY App.java .
 
 # Compile the Java program
 RUN mvn -B -DskipTests compile assembly:single
@@ -17,7 +17,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the compiled JAR file from the build stage
-COPY --from=build /app/target/*.jar calculator.jar
+COPY --from=build /app/target/*.jar app.jar
 
 # Set the entrypoint to run the calculator app
 ENTRYPOINT ["java", "-jar", "calculator.jar"]
