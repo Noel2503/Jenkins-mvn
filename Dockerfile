@@ -8,7 +8,7 @@ WORKDIR /app
 #RUN git clone https://github.com/Noel2503/Jenkins-mvn.git .
 
 # Build the application with Maven
-RUN mvn clean install -DskipTests
+#RUN mvn clean install -DskipTests
 
 # Stage 2: Run the application
 FROM openjdk:17-jdk-slim
