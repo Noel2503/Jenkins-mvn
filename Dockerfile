@@ -8,5 +8,5 @@ WORKDIR /app
 COPY target/Calculator-1.0-SNAPSHOT.jar /app
 
 # Expose the port and set the entrypoint
-EXPOSE 8080
+EXPOSE 8082
 ENTRYPOINT ["java", "-jar", "app.jar"]
