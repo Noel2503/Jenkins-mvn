@@ -5,7 +5,7 @@ FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 
 # Clone the project repository
-RUN git clone https://github.com/Noel2503/Jenkins-mvn.git .
+#RUN git clone https://github.com/Noel2503/Jenkins-mvn.git .
 
 # Build the application with Maven
 RUN mvn clean install -DskipTests
