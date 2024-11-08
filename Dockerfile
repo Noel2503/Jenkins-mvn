@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy jar file (ensure this file exists or is created in a build stage)
-COPY target/sample-app.jar /app
+COPY target/Calculator-1.0-SNAPSHOT.jar /app
 
 # Expose the port and set the entrypoint
 EXPOSE 8080
